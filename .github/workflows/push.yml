@@ -1,14 +1,14 @@
 name: docker-compose-actions-workflow
-on:
-  push:
-    branches:
-      - 'master'
-    paths-ignore:
-      - 'DCOS/**'
-      - 'K8s/**'
-      - 'load-gen/**'
-      - 'OpenShift/**'
-      - 'Swarm/**'
+#on:
+#  push:
+#    branches:
+#      - 'master'
+#    paths-ignore:
+#      - 'DCOS/**'
+#      - 'K8s/**'
+#      - 'load-gen/**'
+#      - 'OpenShift/**'
+#      - 'Swarm/**'
 
 jobs:
   test:
