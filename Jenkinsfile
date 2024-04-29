@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo 'Find All the Dockerfiles'
 
-                Powershell '''
+                powershell '''
 
                     function Imagebuild{
                         
