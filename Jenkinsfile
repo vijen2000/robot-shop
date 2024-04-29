@@ -1,5 +1,5 @@
 pipeline {
-
+    agent none
     options {
                 // Timeout counter starts BEFORE agent is allocated
                 timeout(time: 1, unit: 'SECONDS')
