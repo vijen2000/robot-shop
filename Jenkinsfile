@@ -1,5 +1,7 @@
 pipeline {
-    agent none
+    agent {
+        docker { image 'node:20.11.1-alpine3.19' }
+    }
     options {
                 // Timeout counter starts BEFORE agent is allocated
                 timeout(time: 3000, unit: 'SECONDS')
@@ -7,7 +9,6 @@ pipeline {
 
     stages {
         stage('Build Image') {
-            agent any
             
             steps {
                 echo 'Find All the Dockerfiles'
