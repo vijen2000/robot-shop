@@ -1,7 +1,5 @@
 #!/bin/sh
-
 DIR="/etc/mysql"
-
 FILE=$(fgrep -Rl datadir "$DIR")
 if [ -n "$FILE" ]
 then
@@ -16,4 +14,3 @@ else
     echo "file not found"
     echo " "
 fi
-
