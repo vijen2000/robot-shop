@@ -1,5 +1,5 @@
 # Build the app
-FROM php:7.4
+FROM php:7.4-apache
 
 # Install required packages and Apache
 RUN apt-get update && apt-get install -yqq \

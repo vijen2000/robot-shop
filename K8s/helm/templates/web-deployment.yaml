@@ -44,9 +44,7 @@ spec:
       {{- end }}
       {{- with .Values.web.nodeSelector }}
       nodeSelector:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
-      {{- with .Values.web.tolerations }}
+        service: redis
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}

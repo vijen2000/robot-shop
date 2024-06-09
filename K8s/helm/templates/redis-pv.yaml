@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: data-redis-0
+spec:
+  capacity:
+    storage: 4Gi  # Adjust the capacity as needed
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce  # Adjust the access mode as needed
+  storageClassName: ""  # Adjust as needed
+  persistentVolumeReclaimPolicy: Retain
+  local:
+    path: /mnt/data  # Adjust the path as needed
+  nodeAffinity:  # Specify node affinity here
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: service # Replace with the appropriate node label key
+          operator: In
+          values:
+          - redis
