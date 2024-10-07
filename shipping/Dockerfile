@@ -3,6 +3,10 @@
 #
 FROM debian:10 AS build
 
+RUN apt-get update && apt-get install -y ca-certificates-java && \
+    apt-get clean && \
+    update-ca-certificates -f
+
 RUN apt-get update && apt-get -y install maven
 
 WORKDIR /opt/shipping
